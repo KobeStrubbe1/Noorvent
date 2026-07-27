@@ -1,0 +1,156 @@
+:root {
+  --sky: #87ceeb;
+  --sky-light: #eaf7ff;
+  --sky-deep: #4a90c2;
+  --card-bg: #ffffff;
+  --text: #1f3a4d;
+  --accent: #ff8fa3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--sky) 0%, var(--sky-light) 100%);
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+header p {
+  color: var(--sky-deep);
+  font-size: 1.1rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--sky-deep);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--sky-deep);
+}
+
+.card .beschrijving {
+  font-size: 0.95rem;
+  color: #4a5c68;
+}
+
+.pagina {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.pagina h2 {
+  color: var(--sky-deep);
+  margin-top: 0;
+}
+
+.sectie {
+  margin-bottom: 1.5rem;
+}
+
+.sectie h3 {
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+.geheim {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--sky-light);
+  border: 2px dashed var(--sky-deep);
+  border-radius: 14px;
+}
+
+.geheim-tekst {
+  display: none;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.geheim-tekst.zichtbaar {
+  display: block;
+}
+
+.onthul-knop {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.onthul-knop:hover {
+  background: #ff728c;
+}
+
+.terug {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--sky-deep);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terug:hover {
+  text-decoration: underline;
+}
